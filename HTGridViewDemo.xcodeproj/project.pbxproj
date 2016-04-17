@@ -14,6 +14,9 @@
 		E39906741CC31202003C2A09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39906731CC31202003C2A09 /* Images.xcassets */; };
 		E39906771CC31202003C2A09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E39906751CC31202003C2A09 /* LaunchScreen.xib */; };
 		E39906831CC31202003C2A09 /* HTGridViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E39906821CC31202003C2A09 /* HTGridViewDemoTests.m */; };
+		E39906911CC31234003C2A09 /* WMGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E399068E1CC31234003C2A09 /* WMGridView.m */; };
+		E39906921CC31234003C2A09 /* WMGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E39906901CC31234003C2A09 /* WMGridViewCell.m */; };
+		E39906951CC31381003C2A09 /* HTTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E39906941CC31381003C2A09 /* HTTestCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		E399067C1CC31202003C2A09 /* HTGridViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTGridViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39906811CC31202003C2A09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39906821CC31202003C2A09 /* HTGridViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTGridViewDemoTests.m; sourceTree = "<group>"; };
+		E399068D1CC31234003C2A09 /* WMGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGridView.h; sourceTree = "<group>"; };
+		E399068E1CC31234003C2A09 /* WMGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGridView.m; sourceTree = "<group>"; };
+		E399068F1CC31234003C2A09 /* WMGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGridViewCell.h; sourceTree = "<group>"; };
+		E39906901CC31234003C2A09 /* WMGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGridViewCell.m; sourceTree = "<group>"; };
+		E39906931CC31381003C2A09 /* HTTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTestCell.h; sourceTree = "<group>"; };
+		E39906941CC31381003C2A09 /* HTTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTestCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +90,13 @@
 		E39906651CC31202003C2A09 /* HTGridViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E399068C1CC31234003C2A09 /* HTGridView */,
 				E399066A1CC31202003C2A09 /* AppDelegate.h */,
 				E399066B1CC31202003C2A09 /* AppDelegate.m */,
 				E399066D1CC31202003C2A09 /* ViewController.h */,
 				E399066E1CC31202003C2A09 /* ViewController.m */,
+				E39906931CC31381003C2A09 /* HTTestCell.h */,
+				E39906941CC31381003C2A09 /* HTTestCell.m */,
 				E39906701CC31202003C2A09 /* Main.storyboard */,
 				E39906731CC31202003C2A09 /* Images.xcassets */,
 				E39906751CC31202003C2A09 /* LaunchScreen.xib */,
@@ -117,6 +129,17 @@
 				E39906811CC31202003C2A09 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E399068C1CC31234003C2A09 /* HTGridView */ = {
+			isa = PBXGroup;
+			children = (
+				E399068D1CC31234003C2A09 /* WMGridView.h */,
+				E399068E1CC31234003C2A09 /* WMGridView.m */,
+				E399068F1CC31234003C2A09 /* WMGridViewCell.h */,
+				E39906901CC31234003C2A09 /* WMGridViewCell.m */,
+			);
+			path = HTGridView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39906911CC31234003C2A09 /* WMGridView.m in Sources */,
+				E39906921CC31234003C2A09 /* WMGridViewCell.m in Sources */,
 				E399066F1CC31202003C2A09 /* ViewController.m in Sources */,
 				E399066C1CC31202003C2A09 /* AppDelegate.m in Sources */,
 				E39906691CC31202003C2A09 /* main.m in Sources */,
+				E39906951CC31381003C2A09 /* HTTestCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HTGridViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HTGridViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
